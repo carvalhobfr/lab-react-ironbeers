@@ -6,7 +6,7 @@ const HomeLink = props => {
     <div className="container">
       <nav className="navbar navbar-dark bg-primary">
         <Link className="navbar-brand" to="/">
-          Home
+          <img src="../images/navbar.png" width="100%" height="80vh" alt="" />
         </Link>
       </nav>
     </div>

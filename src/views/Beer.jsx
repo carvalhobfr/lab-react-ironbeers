@@ -7,7 +7,7 @@ class Beer extends Component {
   };
 
   componentDidMount() {
-    axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.beerId}`
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`
       )
       .then(response => {
         console.log(response.data);

@@ -19,7 +19,7 @@ class App extends Component {
               <Route exact path="/new-beer" component={NewBeer} />
               <Route exact path="/" component={Home} />
               <Route exact path="/random-beer" component={RandomBeer} />
-              <Route path="/beers/:beerId" component={Beer} />
+              <Route path="/beers/:id" component={Beer} />
               <Route exact path="/beers" component={AllBeers} />
             </div>
           </div>
