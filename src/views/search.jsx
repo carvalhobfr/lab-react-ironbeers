@@ -25,7 +25,6 @@ export default class MyFilteringComponent extends Component {
   componentDidMount = () => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
       .then(response => {
-        console.log("test", response.data);
         this.setState({
           initialItems: response.data,
           beerList: response.data
@@ -33,11 +32,6 @@ export default class MyFilteringComponent extends Component {
       });
   }
 
-  //   this.setState({
-  //       initialItems: this.props.content,
-  //       beerList: this.props.content
-  //   })
-  // }
 
   render() {
     return (
@@ -50,7 +44,7 @@ export default class MyFilteringComponent extends Component {
             return (
               <div className="beer-item" key={beer._id}>
                 <div>
-                  <img className="beer-image" src={beer.image_url} alt="" />
+                  <img className="beer-image" src={beer.image_url} alt={beer.name} />
                 </div>
                 <div className="beer-info">
                   <h4>{beer.name}</h4>

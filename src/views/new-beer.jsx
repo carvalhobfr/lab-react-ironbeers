@@ -32,13 +32,14 @@ class NewBeer extends Component {
       attenuation_level: this.state.attenuation_level,
       contributed_by: this.state.contributed_by
     });
+    this.props.history.push('/');
   };
 
   render() {
     // console.log("New Beer called");
     return (
       <div className="container">
-        <form action="/new" method="POST" onSubmit={this.addBeer}>
+        <form action="/" method="POST" onSubmit={this.addBeer}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -117,7 +118,7 @@ class NewBeer extends Component {
               className="form-control"
             />
             <br />
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" >
               ADD NEW BEER
             </button>
           </div>

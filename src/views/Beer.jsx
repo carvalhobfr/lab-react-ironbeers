@@ -10,7 +10,7 @@ class Beer extends Component {
     axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`
       )
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           beer: response.data
         });
