@@ -13,7 +13,7 @@ class NewBeer extends Component {
   };
 
   handleChange = event => {
-    console.log(event.target.name, event.target.value);
+    // console.log(event.target.name, event.target.value);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -21,7 +21,7 @@ class NewBeer extends Component {
 
   addBeer = event => {
     event.preventDefault();
-    console.log("Submit clicked");
+    // console.log("Submit clicked");
     console.log(event);
     axios.post("https://ih-beers-api2.herokuapp.com/beers/new", {
       name: this.state.name,
@@ -35,7 +35,7 @@ class NewBeer extends Component {
   };
 
   render() {
-    console.log("New Beer called");
+    // console.log("New Beer called");
     return (
       <div className="container">
         <form action="/new" method="POST" onSubmit={this.addBeer}>
@@ -116,7 +116,7 @@ class NewBeer extends Component {
               placeholder="Contributed by"
               className="form-control"
             />
-
+            <br />
             <button type="submit" className="btn btn-primary">
               ADD NEW BEER
             </button>

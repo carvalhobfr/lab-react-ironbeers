@@ -7,6 +7,9 @@
 	height: 80px;
 }
 
+.navbar-brand {
+	margin: 0;
+}
 .App-header {
 	background-color: #222;
 	height: 150px;
@@ -72,9 +75,6 @@ p {
 
 .beer-image-detail {
 	width: 25vw;
-}
-
-.beer-info-detail {
 }
 
 .headline-container {

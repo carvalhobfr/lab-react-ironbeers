@@ -1,26 +1,29 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import MyFilteringComponent from "./search";
 
 class AllBeers extends Component {
   state = {
     beerList: []
   };
 
-  componentDidMount() {
-    axios.get("https://ih-beers-api2.herokuapp.com/beers")
-    .then(response => {
-        console.log(response.data);
-        this.setState({
-        beerList: response.data
-      });
-    });
-  }
+  // componentDidMount() {
+  //   axios.get("https://ih-beers-api2.herokuapp.com/beers")
+  //     .then(response => {
+  //       console.log(response.data);
+  //       this.setState({
+  //         beerList: response.data
+  //       });
+  //     }); 
+  // }
 
   render() {
     return (
       <div className="container">
-        {this.state.beerList.map(beer => {
+        <MyFilteringComponent content={this.beerList} />
+
+        {/* {this.state.beerList.map(beer => {
           return (
             <div className="beer-item" key={beer._id}>
               <div>
@@ -39,7 +42,7 @@ class AllBeers extends Component {
               </div>
             </div>
           );
-        })}
+        })} */}
       </div>
     );
   }
